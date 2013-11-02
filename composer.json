@@ -1,0 +1,14 @@
+{
+    "name": "51Systems/soap-proxy",
+    "description": "PHP Based Soap Proxy",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Dustin Thomson",
+            "email": "dhomson@51systems.com"
+        }
+    ],
+    "require": {
+        "zendframework/zend-http": "2.2.4"
+    }
+}
