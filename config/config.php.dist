@@ -1,0 +1,33 @@
+<?php
+
+return array(
+    'base-url' => 'http://example.com/',
+
+    'http-client' => array (
+        'adapter'   => 'Zend\Http\Client\Adapter\Curl',
+        'curloptions' => array(
+            CURLOPT_CONNECTTIMEOUT => 10,
+            CURLOPT_TIMEOUT => 10,
+            CURLOPT_RETURNTRANSFER => false,
+            CURLOPT_HEADER => false,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_FOLLOWLOCATION => true
+        ),
+    ),
+
+    'response' => array (
+        'header' => array (
+
+            //Headers that will be passed from the remote server to the client
+            'pass-through' => array(
+                'date',
+                'expires',
+                'cachecontrol',
+                'contenttype',
+                'setcookie',
+                'xxssprotection'
+            )
+        )
+    )
+);
